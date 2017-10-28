@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using RecruitingAteliware.Models;
 
 namespace RecruitingAteliware.Controllers
@@ -12,6 +13,7 @@ namespace RecruitingAteliware.Controllers
     {
         public IActionResult Index()
         {
+            ExecutarConsultas();
             return View();
         }
 
@@ -32,6 +34,38 @@ namespace RecruitingAteliware.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private void ExecutarConsultas()
+        {
+            ViewBag.Linguagens = new SelectListItem[]
+           {
+               new SelectListItem
+               {
+                   Text = "C#",
+                   Value="csharp"                   
+               },
+               new SelectListItem
+               {
+                   Text = "Java",
+                   Value="java"                   
+               },
+               new SelectListItem
+               {
+                   Text = "C",
+                   Value="c"                   
+               },
+               new SelectListItem
+               {
+                   Text = "PHP",
+                   Value="php"                   
+               },
+               new SelectListItem
+               {
+                   Text = "Python",
+                   Value="python"                   
+               },
+           };
         }
     }
 }
