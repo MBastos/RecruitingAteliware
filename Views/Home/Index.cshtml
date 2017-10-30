@@ -1,65 +1,44 @@
 ﻿@model RecruitingAteliware.Forms.FormularioDeLinguagens
 
-@{
-    ViewData["Title"] = "Projeto API GitHubs Page";
+@{    
+    ViewBag.Titulo = "Projeto API GitHub";
+    Layout = "~/Views/Shared/_LayoutForm.cshtml";
+    ViewBag.Controller = "Home";
+    ViewBag.Action = "Salvar2";
 }
-<br/>
+
 @section CssAdicional{
-    <link rel="stylesheet" href="~/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/css/jquery.dataTables.min.css" />    
     <link rel="stylesheet" href="~/css/custom.css" />
 }
 
-<div class="row">
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label class="required">Linguagem:</label>               
-        @Html.DropDownListFor(m => m.Linguagem, (IEnumerable<SelectListItem>)ViewBag.Linguagens, "Selecione...", new { @class = "form-control step2 required"})        
-    </div>            
-</div>   
-<div class="row">
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped" id="datatable-repositorios">
-            <thead>
-                <tr>                    
-                    <th class="text-center col-lg-1 col-md-1 col-sm-1">Id</th>                                
-                    <th class="text-center col-lg-3 col-md-3 col-sm-3">Nome</th>
-                    <th class="text-justify col-lg-1 col-md-1 col-sm-1">
-                        <span class="glyphicons glyphicons-star"></span>
-                    </th>
-                    <th class="text-justify col-lg-7 col-md-7 col-sm-7">Descricao</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div>
-<!-- <div class="row">     
-    <div class="col-md-12 col-lg-12">
-        <label>Repositórios</label>        
-        @Html.ListBox("Repositorios", new List<SelectListItem>(), new { @class = "form-control step2", @style = "height: 350px;" })            
-    </div>    
-</div> -->
-<div class="row">
-    <div class="col-md-6 col-lg-6">
-        <h3>Aplicação</h3>
-        <ul>
-            <li>Botão para buscar e armazenar os repositórios destaques de 5 linguagens à sua escolha</li>
-            <li>Listar os repositórios encontrados [OK]</li>
-            <li>Visualizar os detalhes de cada repositório [OK]</li>
-        </ul>
-    </div>
-    <div class="col-md-6 col-lg-6">
-        <h3>Requisitos</h3>
-        <ul>
-            <li>Deve ser uma aplicação totalmente nova [OK]</li>
-            <li>A solução deve estar em um repositório público do GitHub [OK]</li>
-            <li>A aplicação deve armazenar as informações encontradas</li>
-            <li>Utilizar Postgres, MySQL ou SQL Server</li>
-            <li>O deploy deve ser realizado no Heroku ou Azure</li>
-            <li>A aplicação precisa ter testes automatizados</li>
-        </ul>
+@section Formulario{
+    @Html.HiddenFor(m => m.Repositorios)
+    <div class="row">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label class="required">Linguagem:</label>               
+            @Html.DropDownListFor(m => m.Linguagem, (IEnumerable<SelectListItem>)ViewBag.Linguagens, "Selecione...", new { @class = "form-control step2 required"})        
+        </div>            
     </div>   
-</div>
+    <div class="row">
+        <div class="form-group table-responsive col-lg-12">
+            <table class="table table-bordered table-striped" id="datatable-repositorios">
+                <thead>
+                    <tr class="text-center">     
+                        <th class="col-lg-1 col-md-1 col-sm-1"></th>                                                                   
+                        <th class="col-lg-3 col-md-3 col-sm-3">Nome</th>                  
+                        <th class="col-lg-3 col-md-3 col-sm-3">Proprietario</th>
+                        <th class="col-lg-2 col-md-2 col-sm-2">Criacao</th>
+                        <th class="col-lg-2 col-md-2 col-sm-2">Atualizacao</th>                        
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>    
+}
 
 @section Scripts{
     <script src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script> 
-    <script src="~/js/consulta_api_github.js" asp-append-version="true"></script>    
+    <script src="~/js/moment.js" asp-append-version="true"></script>    
+    <script src="~/js/consulta_api_github.js"></script>    
 }

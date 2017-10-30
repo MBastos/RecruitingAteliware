@@ -1,0 +1,69 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+
+@section CssAdicional{
+    @RenderSection("CssAdicional", required: false)
+}
+
+<div class="page-header">
+    <h2>
+        <strong>
+            @ViewBag.Titulo
+        </strong>
+    </h2>
+</div>
+
+@using (Html.BeginForm(ViewBag.Action as string, ViewBag.Controller as string, FormMethod.Post, new { @id = "form", @class = "form" }))
+{
+    if (!string.IsNullOrEmpty(ViewBag.Sucesso))
+    {
+        <div class="alert alert-success" id="mensagem">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4>Dados Atualizados!</h4>
+            @ViewBag.Sucesso
+        </div>
+    }
+
+    if (!string.IsNullOrEmpty(ViewBag.Erro))
+    {
+        <div class="alert alert-danger" id="mensagem">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4>ERRO!</h4>
+            @ViewBag.Erro
+        </div>
+    }
+
+    if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+    {
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4>Dados Invalidos!</h4>
+            @Html.ValidationSummary()
+        </div>
+    }
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @Html.AntiForgeryToken()
+            @RenderSection("Formulario", required: true)
+        </div>        
+        <div class="panel-footer">
+            <button class="btn btn-success"
+                    type="button"                                            
+                    id="btnSalvar">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar
+            </button>                            
+        </div>
+    </div>
+}

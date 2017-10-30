@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using RecruitingAteliware.Forms;
 using RecruitingAteliware.Models;
 
 namespace RecruitingAteliware.Controllers
@@ -66,6 +67,27 @@ namespace RecruitingAteliware.Controllers
                    Value="python"                   
                },
            };
+        }
+
+        [HttpPost]
+        public JsonResult Salvar2(FormularioDeLinguagens formularioDeLinguagens)
+        {
+            //ExecutarConsultas();
+            return Json(new
+            {
+                responseText = "Dados Cadastrados com sucesso " + formularioDeLinguagens.Linguagem
+            });
+        }
+        
+
+        [HttpPost]
+        public JsonResult Salvar(string linguagem, [FromBody]object[] repositorios)
+        {
+            //ExecutarConsultas();
+            return Json(new
+            {
+                responseText = "Dados Cadastrados com sucesso " + linguagem
+            });
         }
     }
 }
