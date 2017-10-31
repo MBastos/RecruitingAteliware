@@ -121,11 +121,19 @@
                         });  
                     },
                     success: function (response) {
-                        BootstrapDialog.show({
-                            type: BootstrapDialog.TYPE_SUCCESS,
-                            title: 'Dados Cadastrados',
-                            message: response.responseText
-                        });                                                
+                        if (response.Success) {
+                            BootstrapDialog.show({
+                                type: BootstrapDialog.TYPE_SUCCESS,
+                                title: "Dados Cadastrados",
+                                message: response.responseText
+                            });                                                
+                        } else {
+                            BootstrapDialog.show({
+                                type: BootstrapDialog.TYPE_DANGER,
+                                title: "Erro",
+                                message: response.responseText
+                            });  
+                        }
                     }
                 });
             });

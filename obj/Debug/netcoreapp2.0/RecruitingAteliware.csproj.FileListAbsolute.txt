@@ -8,3 +8,13 @@
 /home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.AssemblyInfo.cs
 /home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.dll
 /home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.pdb
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.deps.json
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.runtimeconfig.json
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.runtimeconfig.dev.json
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.dll
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.pdb
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\obj\Debug\netcoreapp2.0\RecruitingAteliware.csproj.CoreCompileInputs.cache
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\obj\Debug\netcoreapp2.0\RecruitingAteliware.AssemblyInfoInputs.cache
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\obj\Debug\netcoreapp2.0\RecruitingAteliware.AssemblyInfo.cs
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\obj\Debug\netcoreapp2.0\RecruitingAteliware.dll
+C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\obj\Debug\netcoreapp2.0\RecruitingAteliware.pdb

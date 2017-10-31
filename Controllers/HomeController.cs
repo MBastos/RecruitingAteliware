@@ -72,14 +72,16 @@ namespace RecruitingAteliware.Controllers
                 SalvarRepositorios(linguagem, repositorios);                
                 return Json(new
                 {
+                    Success = true,
                     responseText = "Repositorios salvos com sucesso!"
                 });
             }
-            catch(Exception)
-            {                
+            catch(Exception exception)
+            {
                 return Json(new
                 {
-                    responseText = "Erro ao salvar os repositorios!"
+                    Success = false,
+                    responseText = exception.GetBaseException().Message
                 });
             }            
         }
