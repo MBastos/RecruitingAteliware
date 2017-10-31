@@ -1,13 +1,3 @@
-/home/bastos/DotNetProjects/RecruitingAteliware/bin/Debug/netcoreapp2.0/RecruitingAteliware.deps.json
-/home/bastos/DotNetProjects/RecruitingAteliware/bin/Debug/netcoreapp2.0/RecruitingAteliware.runtimeconfig.json
-/home/bastos/DotNetProjects/RecruitingAteliware/bin/Debug/netcoreapp2.0/RecruitingAteliware.runtimeconfig.dev.json
-/home/bastos/DotNetProjects/RecruitingAteliware/bin/Debug/netcoreapp2.0/RecruitingAteliware.dll
-/home/bastos/DotNetProjects/RecruitingAteliware/bin/Debug/netcoreapp2.0/RecruitingAteliware.pdb
-/home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.csproj.CoreCompileInputs.cache
-/home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.AssemblyInfoInputs.cache
-/home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.AssemblyInfo.cs
-/home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.dll
-/home/bastos/DotNetProjects/RecruitingAteliware/obj/Debug/netcoreapp2.0/RecruitingAteliware.pdb
 C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.deps.json
 C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.runtimeconfig.json
 C:\Users\andersonB\Documents\DotNetCoreProjects\RecruitingAteliware\bin\Debug\netcoreapp2.0\RecruitingAteliware.runtimeconfig.dev.json
