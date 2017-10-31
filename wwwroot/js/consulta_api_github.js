@@ -46,6 +46,12 @@
                             },
                             columnDefs: [     
                             {
+                                targets: 1,                                
+                                render: function (data) {
+                                    return "<a href=" + data.html_url + " target='_blank'>" + data.name + "</a>";
+                                }
+                            },
+                            {
                                 targets: 2,
                                 data: 'owner',
                                 render: function (data) {
@@ -73,7 +79,7 @@
                                     "data":           null,
                                     "defaultContent": ''
                                 },                                                             
-                                { data: 'name', class: "text-center"},                                
+                                { data: {}, class: "text-center"},                                
                                 { data: "owner", class: "text-center"},
                                 { data: "created_at", class: "text-center"},                                
                                 { data: "updated_at", class: "text-center"}                                
