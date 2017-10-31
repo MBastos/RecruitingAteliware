@@ -105,24 +105,31 @@
 
         $('#btnSalvar')
             .on("click", function (e) {
-                var x = JSON.stringify({
-                    reps
-                });                                              
-                $.ajax({
+                debugger;                
+
+                //$.getJSON
+
+                var cars =  reps
+
+                $.ajax({                    
                     type: "post",                    
                     url: baseUrl("Home/Salvar"),
                     dataType: "json",        
                     //contentType: 'application/json',
-                    ContentType: 'application/json;utf-8',
-                    traditional: true,
-                    data:{
+                    //ContentType: 'application/json;utf-8',
+                    //traditional: true,
+                   // contentType: 'application/json',
+                   ontentType: "application/json", 
+                    data: {
                         "linguagem": linguagem.val(),
-                        "repositorios" : x.reps
+                        "repositorios" : cars
                     },                    
-                    error: function (response) {                        
+                    error: function (response) {       
+                        debugger;                 
                         alert(response.responseText);
                     },
                     success: function (response) {
+                        debugger;
                         alert(response.responseText);
                     }
                 });

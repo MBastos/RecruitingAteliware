@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RecruitingAteliware.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace RecruitingAteliware
 {
@@ -21,6 +23,14 @@ namespace RecruitingAteliware
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // services.AddDbContext<AteliwareContext>(options =>
+            //         options.UseMySQL(Configuration.GetConnectionString("BaseCms")));
+            
+            var connection = Configuration.GetConnectionString("BaseCms");
+            services.AddDbContext<AteliwareContext>(options =>
+                options.UseMySql(connection)
+            );
+
             services.AddMvc();
         }
 
