@@ -9,11 +9,11 @@
 
 @section CssAdicional{
     <link rel="stylesheet" href="~/css/jquery.dataTables.min.css" />    
+    <link rel="stylesheet" href="~/css/bootstrap-dialog.min.css" />    
     <link rel="stylesheet" href="~/css/custom.css" />
 }
 
 @section Formulario{
-    @Html.HiddenFor(m => m.Repositorios)
     <div class="row">
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label class="required">Linguagem:</label>               
@@ -40,5 +40,6 @@
 @section Scripts{
     <script src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script> 
     <script src="~/js/moment.js" asp-append-version="true"></script>    
+    <script src="~/js/bootstrap-dialog.min.js" asp-append-version="true"></script>    
     <script src="~/js/consulta_api_github.js"></script>    
 }

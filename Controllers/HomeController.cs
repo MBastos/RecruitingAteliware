@@ -67,11 +67,21 @@ namespace RecruitingAteliware.Controllers
         [HttpPost]
         public JsonResult Salvar(string linguagem, Item[] repositorios)
         {   
-            SalvarRepositorios(linguagem, repositorios);
-            return Json(new
+            try
             {
-                responseText = "Dados Cadastrados com sucesso!"
-            });
+                SalvarRepositorios(linguagem, repositorios);                
+                return Json(new
+                {
+                    responseText = "Repositorios salvos com sucesso!"
+                });
+            }
+            catch(Exception)
+            {                
+                return Json(new
+                {
+                    responseText = "Erro ao salvar os repositorios!"
+                });
+            }            
         }
 
         private void SalvarRepositorios(string linguagem, Item[] repositorios)

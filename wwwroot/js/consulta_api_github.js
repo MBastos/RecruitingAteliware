@@ -27,9 +27,9 @@
 
     var table = null;
     var dataTable = $("#datatable-repositorios");    
-    var reps = null;
+    var repositoriosLinguagem = null;
     var alunosDatatable = function (repositorios) {            
-        reps = repositorios;
+        repositoriosLinguagem = repositorios;
         //$("#Repositorios").val(repositorios);
         table = dataTable
                     .DataTable({
@@ -104,33 +104,28 @@
         });
 
         $('#btnSalvar')
-            .on("click", function (e) {
-                debugger;                
-
-                //$.getJSON
-
-                var cars =  reps
-
+            .on("click", function (e) {                
                 $.ajax({                    
                     type: "post",                    
                     url: baseUrl("Home/Salvar"),
-                    dataType: "json",        
-                    //contentType: 'application/json',
-                    //ContentType: 'application/json;utf-8',
-                    //traditional: true,
-                   // contentType: 'application/json',
-                   ontentType: "application/json", 
+                    dataType: "json",                            
                     data: {
                         "linguagem": linguagem.val(),
-                        "repositorios" : cars
+                        "repositorios" : repositoriosLinguagem
                     },                    
-                    error: function (response) {       
-                        debugger;                 
-                        alert(response.responseText);
+                    error: function (response) {    
+                        BootstrapDialog.show({
+                            type: BootstrapDialog.TYPE_DANGER,
+                            title: 'Erro ao Cadastrar',
+                            message: response.responseText
+                        });  
                     },
                     success: function (response) {
-                        debugger;
-                        alert(response.responseText);
+                        BootstrapDialog.show({
+                            type: BootstrapDialog.TYPE_SUCCESS,
+                            title: 'Dados Cadastrados',
+                            message: response.responseText
+                        });                                                
                     }
                 });
             });
