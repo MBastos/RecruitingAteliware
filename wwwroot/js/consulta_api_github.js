@@ -126,8 +126,8 @@
                             message: response.responseText
                         });  
                     },
-                    success: function (response) {
-                        if (response.Success) {
+                    success: function (response) {                        
+                        if (response.success) {
                             BootstrapDialog.show({
                                 type: BootstrapDialog.TYPE_SUCCESS,
                                 title: "Dados Cadastrados",

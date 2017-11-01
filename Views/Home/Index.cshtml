@@ -1,10 +1,7 @@
 ﻿@model RecruitingAteliware.Forms.FormularioDeLinguagens
 
 @{    
-    ViewBag.Titulo = "Projeto API GitHub";
-    Layout = "~/Views/Shared/_LayoutForm.cshtml";
-    ViewBag.Controller = "Home";
-    ViewBag.Action = "Salvar2";
+    ViewBag.Titulo = "Projeto API GitHub";    
 }
 
 @section CssAdicional{
@@ -13,8 +10,16 @@
     <link rel="stylesheet" href="~/css/custom.css" />
 }
 
-@section Formulario{
-    <div class="row">
+<div class="page-header">
+    <h2>
+        <strong>
+            @ViewBag.Titulo
+        </strong>
+    </h2>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">        
+        <div class="row">
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label class="required">Linguagem:</label>               
             @Html.DropDownListFor(m => m.Linguagem, (IEnumerable<SelectListItem>)ViewBag.Linguagens, "Selecione...", new { @class = "form-control step2 required"})        
@@ -35,7 +40,15 @@
             </table>
         </div>
     </div>    
-}
+    </div>        
+    <div class="panel-footer">
+        <button class="btn btn-success"
+                type="button"                                            
+                id="btnSalvar">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar
+        </button>                            
+    </div>
+</div>
 
 @section Scripts{
     <script src="~/js/jquery.dataTables.min.js" asp-append-version="true"></script> 
