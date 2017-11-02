@@ -11,4 +11,3 @@ CREATE TABLE repositorio(
   data_atualizacao DATETIME NOT NULL,
   data_cadastro DATETIME NULL DEFAULT GETDATE()
 );
-

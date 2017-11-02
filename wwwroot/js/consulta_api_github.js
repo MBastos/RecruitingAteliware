@@ -137,7 +137,13 @@
                             BootstrapDialog.show({
                                 type: BootstrapDialog.TYPE_DANGER,
                                 title: "Erro",
-                                message: response.responseText
+                                message: response.responseText,
+                                buttons: [{
+                                    label: 'Close',
+                                    action: function(dialogItself){
+                                        dialogItself.close();
+                                    }
+                                }]
                             });  
                         }
                     }
