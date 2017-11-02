@@ -132,9 +132,10 @@
                                 type: BootstrapDialog.TYPE_SUCCESS,
                                 title: "Dados Cadastrados",
                                 message: response.responseText,
-                                buttons: [{
-                                    label: 'Ok',
-                                    cssClass: 'btn-success',
+                                buttons: [{                                    
+                                    icon: "glyphicons glyphicons-ok",
+                                    label: "Ok",
+                                    cssClass: "btn-success",
                                     action: function(dialogItself){
                                         dialogItself.close();
                                     }
@@ -145,8 +146,9 @@
                                 type: BootstrapDialog.TYPE_DANGER,
                                 title: "Erro",
                                 message: response.responseText,
-                                buttons: [{
-                                    label: 'Close',
+                                buttons: [{                                    
+                                    icon: "glyphicons glyphicons-remove"
+                                    label: "Close",
                                     action: function(dialogItself){
                                         dialogItself.close();
                                     }
