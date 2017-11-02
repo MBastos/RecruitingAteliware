@@ -133,7 +133,7 @@
                                 title: "Dados Cadastrados",
                                 message: response.responseText,
                                 buttons: [{                                    
-                                    icon: "glyphicons glyphicons-ok",
+                                    icon: "fa fa-check",
                                     label: "Ok",
                                     cssClass: "btn-success",
                                     action: function(dialogItself){
@@ -147,7 +147,7 @@
                                 title: "Erro",
                                 message: response.responseText,
                                 buttons: [{                                    
-                                    icon: "glyphicons glyphicons-remove",
+                                    icon: "fa fa-window-close",
                                     label: "Close",
                                     action: function(dialogItself){
                                         dialogItself.close();
