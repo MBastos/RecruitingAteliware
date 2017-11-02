@@ -131,7 +131,13 @@
                             BootstrapDialog.show({
                                 type: BootstrapDialog.TYPE_SUCCESS,
                                 title: "Dados Cadastrados",
-                                message: response.responseText
+                                message: response.responseText,
+                                buttons: [{
+                                    label: 'Close',
+                                    action: function(dialogItself){
+                                        dialogItself.close();
+                                    }
+                                }]
                             });                                                
                         } else {
                             BootstrapDialog.show({
