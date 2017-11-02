@@ -133,7 +133,8 @@
                                 title: "Dados Cadastrados",
                                 message: response.responseText,
                                 buttons: [{
-                                    label: 'Close',
+                                    label: 'Ok',
+                                    cssClass: 'btn-success',
                                     action: function(dialogItself){
                                         dialogItself.close();
                                     }
@@ -156,4 +157,3 @@
                 });
             });
 })($ || jQuery);
-
