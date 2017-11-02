@@ -25,7 +25,7 @@ namespace RecruitingAteliware
         {   
             var connection = Configuration.GetConnectionString("BaseAteliware");
             services.AddDbContext<AteliwareContext>(options =>
-                options.UseMySql(connection)
+                options.UseSqlServer(connection)
             );
 
             services.AddMvc();
