@@ -147,7 +147,7 @@
                                 title: "Erro",
                                 message: response.responseText,
                                 buttons: [{                                    
-                                    icon: "glyphicons glyphicons-remove"
+                                    icon: "glyphicons glyphicons-remove",
                                     label: "Close",
                                     action: function(dialogItself){
                                         dialogItself.close();
