@@ -99,7 +99,8 @@ namespace RecruitingAteliware.Controllers
                     Descricao = item.description,
                     Proprietario = item.Owner.login,
                     DataCriacao = item.created_at,
-                    DataAtualizacao = item.updated_at
+                    DataAtualizacao = item.updated_at,
+                    DataCadastro = DateTime.Now
                 };
                 _ateliwareContext.Repositorios.Add(repositorio);
                 i++;
